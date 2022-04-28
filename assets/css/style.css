@@ -1,0 +1,73 @@
+@font-face {
+  font-family: 'ralewaysthin';
+  src: url('../fonts/raleway-variablefont_wght-webfont.woff2') format('woff2'),
+       url('../fonts/raleway-variablefont_wght-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'ralewaythin', sans-serif;
+  background-color: #efefef;
+}
+
+#json-print  {
+    overflow: scroll;
+    height: 80%;
+    width: 60%;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    scroll-behavior: smooth;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border-radius: 1%;
+    box-shadow: 0 2px 5px #bdbdbd;
+  }
+
+#json-print::-webkit-scrollbar {
+    display: none;
+}
+
+#json-print div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border: 1px solid #e6e6e6;
+}
+
+#json-print div img {
+  margin: 30px;
+  background-color: #ffffff;
+  border-radius: 100%;
+  border: 1px solid #e6e6e6;
+  width: 15%;
+  flex: 1 15%;
+}
+
+#json-print div .list {
+  display: block;
+  margin: 0;
+  background-color: #ffffff;
+  border-style: none;
+  flex: 2 78%;
+}
+
+#json-print div .list p {
+  margin: 1.7% 0 0 5%;
+  background-color: #ffffff;
+}
+
+#json-print div .list h2 {
+  font-size: xxx-large;
+  margin: 1% 1% 2% 1%;
+  background-color: #ffffff;
+}
