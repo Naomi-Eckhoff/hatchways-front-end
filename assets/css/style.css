@@ -4,18 +4,17 @@
        url('../fonts/raleway-variablefont_wght-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
-
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'ralewaythin', sans-serif;
+  font-family: 'raleway';
   background-color: #efefef;
 }
 
-#json-print  {
+#students-output  {
     overflow: scroll;
     height: 80%;
     width: 60%;
@@ -32,42 +31,70 @@
     box-shadow: 0 2px 5px #bdbdbd;
   }
 
-#json-print::-webkit-scrollbar {
+#students-output::-webkit-scrollbar {
     display: none;
 }
 
-#json-print div {
+#students-output div {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   background-color: #ffffff;
   border: 1px solid #e6e6e6;
+  border-top: 0;
 }
 
-#json-print div img {
+#students-output div img {
   margin: 30px;
   background-color: #ffffff;
   border-radius: 100%;
-  border: 1px solid #e6e6e6;
+  border: 1px solid #bdbdbd;
   width: 15%;
   flex: 1 15%;
 }
 
-#json-print div .list {
+#students-output div .list {
   display: block;
   margin: 0;
   background-color: #ffffff;
   border-style: none;
-  flex: 2 78%;
+  flex: 2 50%;
 }
 
-#json-print div .list p {
-  margin: 1.7% 0 0 5%;
+#students-output div .list p {
+  margin: 1.2% 0 0 4.75%;
   background-color: #ffffff;
+  font-weight: 300;
 }
 
-#json-print div .list h2 {
+#students-output div .list h2 {
   font-size: xxx-large;
-  margin: 1% 1% 2% 1%;
+  margin: 1.25% 1% 1% 1%;
   background-color: #ffffff;
+  font-weight: bold;
+  font-variant: all-small-caps;
+}
+
+#students-output div button {
+  font-size: xxx-large;
+  background-color: #ffffff;
+  flex: 3 25%;
+}
+
+.search-bar {
+  display: flex;
+  background-color: #ffffff;
+  width: 98%;
+  height: 8%;
+  border: 0;
+  border-bottom: 1px solid #e6e6e6;
+  margin: 0 auto 0 auto;
+  font-size: x-large;
+  padding: 1.5% 0.75% 0 0.75%;
+  font-weight: 300;
+}
+
+.search-bar:focus {
+  outline: none;
+  border-bottom: 1px solid black;
 }
