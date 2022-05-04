@@ -44,13 +44,18 @@
   border-top: 0;
 }
 
+#students-output .students-img-div {
+  flex: 1 20%;
+  align-content: start;
+  border:none;
+}
+
 #students-output div img {
-  margin: 30px;
+  margin: 15% auto 15% auto;
   background-color: #ffffff;
   border-radius: 100%;
   border: 1px solid #bdbdbd;
-  width: 15%;
-  flex: 1 15%;
+  width: 75%;
 }
 
 #students-output div .list {
@@ -58,27 +63,95 @@
   margin: 0;
   background-color: #ffffff;
   border-style: none;
-  flex: 2 50%;
+  flex: 2 65%;
 }
 
 #students-output div .list p {
-  margin: 1.2% 0 0 4.75%;
+  margin: 1% 0 0 4%;
   background-color: #ffffff;
-  font-weight: 300;
+  font-weight: normal;
+  font-size: smaller;
+  font-family: raleway;
 }
 
 #students-output div .list h2 {
-  font-size: xxx-large;
-  margin: 1.25% 1% 1% 1%;
+  font-size: xx-large;
+  margin: 4% 1% 0% 1%;
   background-color: #ffffff;
   font-weight: bold;
-  font-variant: all-small-caps;
+  font-family: raleway;
+}
+
+#students-output .students-table-div {
+  font-weight: normal;
+  font-size: smaller;
+  font-family: raleway;
+  border: none;
+}
+
+#students-output table {
+  background-color: #ffffff;
+  margin: 4% 0 0 4%;
+}
+
+#students-output tr {
+  white-space: break-spaces;
+}
+
+#students-output td {
+  background-color: #ffffff;
+}
+
+#students-output .students-tags-div {
+  margin: 0 0 0 4%;
+  font-weight: normal;
+  font-size: smaller;
+  font-family: raleway;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+}
+
+#students-output .students-tags-storage-div {
+  font-weight: normal;
+  font-size: small;
+  font-family: raleway;
+  border: none;
+  margin: 0 0 2% 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+#students-output .student-tag {
+  padding: 8px;
+  background-color: #e1e1e1;
+  margin: 10px 2px 0 3px;
+  border-radius: 10%;
+}
+
+#students-output .students-tags-entry-form {
+  background-color: #ffffff;
+}
+
+#students-output .students-tags-entry-form .search-bar {
+  width: 100%;
+  font-size: small;
+  padding: 5px;
+  margin: 0 0 20px 0;
 }
 
 #students-output div button {
   font-size: xxx-large;
+  font-weight: 500;
+  color: #999999;
   background-color: #ffffff;
-  flex: 3 25%;
+  flex: 3 15%;
+  border: none;
+  align-self: flex-start;
+  padding: 1% 1% 2% 8%;
 }
 
 .search-bar {
