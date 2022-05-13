@@ -3,7 +3,7 @@ const nameSearchBar = document.querySelector("#name-search-bar");
 const tagSearchBar = document.querySelector("#tag-search-bar");
 
 const studentsApiUrl = "https://api.hatchways.io/assessment/students";
-let studentsStorage = {};
+var studentsStorage = {};
 
 const studentsFetcher = async function() {
     await fetch(studentsApiUrl)
@@ -117,14 +117,16 @@ const studentsOutput = function(students) {
 }
 
 const handleNewTag = function(id) {
-    const studentTag = document.createElement("span");
-    studentTag.className = "student-tag";
-    studentTag.textContent = document.querySelector("#student-tags-entry-input" + id).value;
+    if (document.querySelector("#student-tags-entry-input" + id).value) {
+        const studentTag = document.createElement("span");
+        studentTag.className = "student-tag";
+        studentTag.textContent = document.querySelector("#student-tags-entry-input" + id).value;
 
-    const studentTagStorageDiv = document.querySelector("#student-tags-storage-div" + id);
-    studentTagStorageDiv.appendChild(studentTag);
+        const studentTagStorageDiv = document.querySelector("#student-tags-storage-div" + id);
+        studentTagStorageDiv.appendChild(studentTag);
 
-    studentsStorage.find(arr => arr.id === String(id)).tags.push(document.querySelector("#student-tags-entry-input" + id).value);
+        studentsStorage.find(arr => arr.id === String(id)).tags.push(document.querySelector("#student-tags-entry-input" + id).value);
+    }
 }
 
 //My normal methods of simulating a pause in javascript was behaving either too aggressively
@@ -162,7 +164,6 @@ const studentCombinedSearch = function() {
         for (i = 0; i < studentsStorage.length; i++) {
             if (studentsStorage[i].fullName.includes(searchName) && studentsStorage[i].tags.map(arr => arr.includes(String(searchTag))).includes(true)) {
                 studentsOutput(studentsStorage[i]);
-                console.log(studentsStorage[i]);
             }
         };
     }
@@ -171,7 +172,6 @@ const studentCombinedSearch = function() {
         for (i = 0; i < studentsStorage.length; i++) {
             if (studentsStorage[i].fullName.includes(searchName)) {
                 studentsOutput(studentsStorage[i]);
-                console.log(studentsStorage[i]);
             }
         };
     }

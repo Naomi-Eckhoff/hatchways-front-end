@@ -15,24 +15,35 @@
 }
 
 #students-output  {
-    overflow: scroll;
-    height: 80%;
-    width: 60%;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-    scroll-behavior: smooth;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    background-color: #ffffff;
-    border-radius: 1%;
-    box-shadow: 0 2px 5px #bdbdbd;
-  }
+  overflow-y: scroll;
+  height: 80%;
+  width: 60%;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  scroll-behavior: smooth;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  border-radius: 1%;
+  box-shadow: 0 2px 5px #bdbdbd;
+}
 
 #students-output::-webkit-scrollbar {
-    display: none;
+  background-color: transparent;
+  width: 3px;
+}
+
+#students-output::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 30%;
+}
+
+#students-output::-webkit-scrollbar-thumb:hover {
+  background-color: grey;
+  width: 3px;
 }
 
 #students-output div {
@@ -42,6 +53,7 @@
   background-color: #ffffff;
   border: 1px solid #e6e6e6;
   border-top: 0;
+  border-right: 0;
 }
 
 #students-output .students-img-div {
